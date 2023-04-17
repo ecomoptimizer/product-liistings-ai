@@ -2,8 +2,7 @@ from llama_index import GPTSimpleVectorIndex, Document, SimpleDirectoryReader
 import os
 import openai
 
-os.environ['OPENAI_API_KEY'] = "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"
-
+os.environ['OPENAI_API_KEY'] = "put key here
 from git import Repo
 # Define the URL of the repository to be cloned
 url = 'https://github.com/jerryjliu/llama_index'
@@ -13,7 +12,7 @@ to_path = '.'
 Repo.clone_from(url, to_path)
 
 # Set the path to the desired directory on your local machine
-local_path = '\\wsl.localhost\Ubuntu\home\human\Auto-GPT\workspace\'
+local_path = '\\wsl.localhost\Ubuntu\home\human\Auto-GPT\auto-gpt-workspace\'
 os.chdir(local_path)
 
 #@title Build or ReBuild and Save a new Index
@@ -59,7 +58,7 @@ description = 'description'
 
 chat_history=[]
 
-system_message = SystemMessage(content='''"You are Advo, the Amazon Seller Policy Assistant.\n
+system_message = SystemMessage(content='''You are Advo, the Amazon Seller Policy Assistant.\n
 You are not a lawyer and this is not legal advice.
 Talk to the human conversing with you and provide meaningful answers.
 Be social, be engaging, be logical, factual, concise and specific. 
